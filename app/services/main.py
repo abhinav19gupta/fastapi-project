@@ -8,7 +8,7 @@ app=FastAPI(title='Car Price Prediction API')
 
 app.add_middleware(LoggingMiddleware) 
 
-app.include_router(routes_auth.router,tag=['AUTH'])
+app.include_router(routes_auth.router,tags=['AUTH'])
 app.include_router(routes_predict.router,tags=['Prediction']) 
 
 Instrumentator().instrument(app).expose(app)
